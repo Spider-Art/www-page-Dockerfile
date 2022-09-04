@@ -4,7 +4,7 @@ FROM centos/httpd-24-centos8
 # and set permissions so that the container runs without the root access
 USER 0
 RUN pwd
-RUN ls /workspace/source
+RUN ls /workspace
 ADD index.html /tmp/src/index.html
 RUN chown -R 1001:0 /tmp/src
 USER 1001
