@@ -3,6 +3,8 @@ FROM centos/httpd-24-centos8
 # Add application sources to a directory where the assemble script expects them
 # and set permissions so that the container runs without the root access
 USER 0
+RUN pwd
+RUN ls
 ADD index.html /tmp/src/index.html
 RUN chown -R 1001:0 /tmp/src
 USER 1001
