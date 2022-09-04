@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel8/httpd-24
+FROM centos/httpd-24-centos8
 
 # Add application sources to a directory where the assemble script expects them
 # and set permissions so that the container runs without the root access
