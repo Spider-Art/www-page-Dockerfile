@@ -4,7 +4,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 # and set permissions so that the container runs without the root access
 USER 0
 RUN pwd
-RUN ls /workspace/output/
+RUN ls /output/
 ADD index.html /tmp/src/index.html
 RUN chown -R 1001:0 /tmp/src
 USER 1001
