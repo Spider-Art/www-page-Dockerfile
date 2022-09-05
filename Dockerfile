@@ -5,6 +5,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 USER 0
 RUN pwd
 RUN ls /
+RUN dnf install -y git
 #RUN find |grep index.html
 #ADD /workspace/source/index.html /tmp/src/index.html
 #RUN chown -R 1001:0 /tmp/src
