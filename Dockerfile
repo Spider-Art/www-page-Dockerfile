@@ -5,13 +5,13 @@ FROM registry.redhat.io/rhel8/httpd-24
 USER 0
 RUN pwd
 RUN ls /
-RUN dnf install -y git
-RUN mkdir /tmp/tmp
-RUN cd /tmp/tmp
-RUN git clone https://github.com/Spider-Art/www-page.git
-RUN ls /tmp/tmp/
+#RUN dnf install -y git
+#RUN mkdir /tmp/tmp
+#RUN cd /tmp/tmp
+#RUN git clone https://github.com/Spider-Art/www-page.git
+#RUN ls /tmp/tmp/
 #RUN find |grep index.html
-ADD /tmp/tmp/www-page/index.html /tmp/src/index.html
+ADD index.html /tmp/src/index.html
 #RUN chown -R 1001:0 /tmp/src
 USER 1001
 
