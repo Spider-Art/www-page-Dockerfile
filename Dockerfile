@@ -6,6 +6,10 @@ USER 0
 RUN pwd
 RUN ls /
 RUN dnf install -y git
+RUN mkdir /tmp/tmp
+RUN cd /tmp/tmp
+RUN git clone https://github.com/Spider-Art/www-page.git
+RUN ls /tmp/tmp/
 #RUN find |grep index.html
 #ADD /workspace/source/index.html /tmp/src/index.html
 #RUN chown -R 1001:0 /tmp/src
