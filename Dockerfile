@@ -3,11 +3,8 @@ FROM registry.redhat.io/rhel8/httpd-24
 # Add application sources to a directory where the assemble script expects them
 # and set permissions so that the container runs without the root access
 USER 0
-RUN pwd
-RUN ls /
-#RUN dnf install -y git
-#RUN mkdir /tmp/tmp
-#RUN cd /tmp/tmp
+RUN dnf install -y wget
+RUN wget https://github.com/Spider-Art/www-page/blob/master/index.html
 #RUN git clone https://github.com/Spider-Art/www-page.git
 #RUN ls /tmp/tmp/
 #RUN find |grep index.html
