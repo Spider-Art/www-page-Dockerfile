@@ -4,7 +4,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 # and set permissions so that the container runs without the root access
 USER 0
 RUN dnf install -y wget
-RUN wget --directory-prefix=/tmp/src/ https://github.com/Spider-Art/www-page/blob/master/index.html
+RUN wget --directory-prefix=/tmp/src/ https://raw.githubusercontent.com/Spider-Art/www-page/master/index.html
 #RUN git clone https://github.com/Spider-Art/www-page.git
 #RUN ls /tmp/tmp/
 #RUN find |grep index.html
